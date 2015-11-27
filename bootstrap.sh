@@ -9,5 +9,5 @@ sudo pip install ansible
 sudo mkdir /etc/ansible
 sudo touch /etc/ansible/hosts
 git clone https://github.com/RobertATX/CI.git
-ansible-playbook ./prod/deploy.yml --private-key=\
+ansible-playbook ./CI/prod/deploy.yml --private-key=\
 ./ssh_keys/prod_key -u deployer -i ./prod/hosts
