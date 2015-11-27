@@ -22,7 +22,7 @@ ssl_certs_dir: ~/CI/ssl_cert
 ## directory where deploy_key was created and stored.
 ## do not include a trailing slash
 local_deploy_key_dir: ~/CI/deploy_key
-code_repository: ssh://git@github.com/makaimc/choose-your-own-adventure-presentations.git
+code_repository: git@github.com:RobertATX/py-flask-signup-docker.git
 
 
 # Databases
@@ -43,17 +43,17 @@ wsgi_env_vars: {
     ## make sure to set your own unique long secret key for your app
     SECRET_KEY: 'super secret key make sure to change this',
     DATABASE_URL: '{{ db_url }}',
-    REDIS_SERVER: 'localhost',
-    REDIS_PORT: 6379,
-    REDIS_DB: 1,
+##    REDIS_SERVER: 'localhost',
+##    REDIS_PORT: 6379,
+##    REDIS_DB: 1,
     ## these next two environment variables are found in the
     ## Twilio account dashboard on twilio.com
-    TWILIO_ACCOUNT_SID: 'found on the twilio dashboard',
-    TWILIO_AUTH_TOKEN: 'also found on the twilio dashboard',
+##    TWILIO_ACCOUNT_SID: 'found on the twilio dashboard',
+##    TWILIO_AUTH_TOKEN: 'also found on the twilio dashboard',
     ## grab a number on Twilio for the application and Ansible
-    TWILIO_NUMBER: '+15551234567',
-    CELERY_BROKER_URL: 'redis://localhost:6379/0',
-    CELERY_RESULT_BACKEND: 'redis://localhost:6379/0',
+##    TWILIO_NUMBER: '+15551234567',
+##    CELERY_BROKER_URL: 'redis://localhost:6379/0',
+##    CELERY_RESULT_BACKEND: 'redis://localhost:6379/0',
 }
 ## username you want to use to log into app's admin screen
 app_admin_user: ''
