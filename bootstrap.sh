@@ -11,7 +11,7 @@ sudo touch /etc/ansible/hosts
 
 if [ -d "CI" ]; then 
   CD CI
-  git update
+  git pull
   else
   git clone https://github.com/RobertATX/CI.git
   
