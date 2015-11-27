@@ -6,8 +6,13 @@ sudo apt-get update
 sudo apt-get install -y ansible
 sudo apt-get install -y fail2ban python-pip python-dev python-virtualenv git
 sudo pip install ansible
-sudo mkdir /etc/ansible
-sudo touch /etc/ansible/hosts
+
+
+
+if [ ! -d "/etc/ansible" ]; then 
+   sudo mkdir /etc/ansible
+   sudo touch /etc/ansible/hosts
+fi
 
 if [ -d "CI" ]; then 
   CD CI
