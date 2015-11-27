@@ -14,14 +14,14 @@ from fabric.contrib.files import sed
 env.user = 'root'
 
 # the remote server's root password
-env.password = ''
+env.password = 'xxxx'
 
 # all IP address or hostnames of the servers you want to put
 # your SSH keys and authorized_host files on, ex: 192.168.1.1
-env.hosts = ['192.168.1.1']
+env.hosts = ['xx.xx.xx.xx']
 
 # your full name for the new non-root user
-env.new_user_full_name = 'Matt Makai' # ex: Matt Makai
+env.new_user_full_name = 'Robert Donovan'
 
 # username for the new non-root user to be created
 env.new_user = 'deployer' # ex: deployer
@@ -33,7 +33,7 @@ env.new_user_grp = 'deployers' # ex: deployers
 # authorized_keys files are located (they will be scp'd
 # to target hosts) don't include a trailing slash
 # note: the tilde resolves to your home directory
-env.ssh_key_dir = '~/fsp-deployment-guide/ssh_keys'
+env.ssh_key_dir = '~/CI/ssh_keys'
 
 """
    The following functions should not need to be modified to
