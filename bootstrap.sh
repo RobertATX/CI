@@ -8,7 +8,15 @@ sudo apt-get install -y fail2ban python-pip python-dev python-virtualenv git
 sudo pip install ansible
 sudo mkdir /etc/ansible
 sudo touch /etc/ansible/hosts
-git clone https://github.com/RobertATX/CI.git
+
+if [ -d "CI" ]; then 
+  CD CI
+  git update
+  else
+  git clone https://github.com/RobertATX/CI.git
+  
+fi
+
 ansible-playbook ./CI/prod/deploy.yml 
 #--private-key=\
 #./ssh_keys/prod_key -u deployer -i="./CI/prod/hosts"
