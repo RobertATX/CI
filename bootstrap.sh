@@ -9,3 +9,6 @@ sudo pip install ansible
 sudo mkdir /etc/ansible
 sudo touch /etc/ansible/hosts
 git clone https://github.com/RobertATX/CI.git
+cd CI
+chmod 0744 deploy_prod.sh
+./deploy_prod.sh
