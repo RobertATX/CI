@@ -9,7 +9,7 @@
 - include: nginx_no_ssl.yml
   when: not deploy_ssl
 
-#- include: git.yml
+- include: git.yml
 #- include: postgresql.yml
 #- include: redis.yml
 #- include: dependencies.yml
