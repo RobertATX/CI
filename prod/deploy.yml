@@ -6,5 +6,3 @@
   user: ubuntu 
   roles: 
     - common 
- vars:
-    project_path: "{{ host_project_path|default('/CI/prod') }}"
