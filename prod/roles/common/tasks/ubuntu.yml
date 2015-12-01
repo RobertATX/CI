@@ -13,6 +13,9 @@
     - python-virtualenv
     - python-dev
 
+- name: Add group "jboss"
+  group: name={{ deploy_group }}
+
 - name: enable SSH in firewall
   ufw: rule=allow port=22
   sudo: yes
