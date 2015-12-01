@@ -9,6 +9,7 @@
   file: path=/home/{{ deploy_user }}/deploy_key state=directory
 
 - name: ensure deploy key is on remote server
+  sudo: yes
   copy: src={{ local_deploy_key_dir }}/
         dest=/home/{{ deploy_user }}/deploy_key
         mode=0600 owner={{ deploy_user }} group={{ deploy_group }}
