@@ -10,10 +10,10 @@
 
 - name: ensure deploy key is on remote server
   copy: src={{ local_deploy_key_dir }}/deploy_key
-        dest=/home/{{ deploy_user }}/deploy_key/deploy_key
+        dest=/home/{{ deploy_user }}/deploy_key
         mode=0600 owner={{ deploy_user }} group={{ deploy_group }}
 
 - name: clone or pull latest web app code
   git: repo={{ code_repository }} dest={{ app_dir }}
-       key_file=/home/{{ deploy_user }}/deploy_key/deploy_key
+       key_file=/home/{{ deploy_user }}/deploy_key
        accept_hostkey=yes
