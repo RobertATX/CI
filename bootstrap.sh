@@ -22,6 +22,8 @@ if [ -d "CI" ]; then
   
 fi
 
-ansible-playbook ./CI/prod/deploy.yml 
+#ansible-playbook ./CI/prod/deploy.yml 
+
+ansible-playbook -c local ./CI/prod/deploy.yml 
 #--private-key=\
 #./ssh_keys/prod_key -u deployer -i="./CI/prod/hosts"
